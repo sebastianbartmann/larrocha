@@ -12,6 +12,8 @@ exports.handler = async (event, context) => {
   /* parse the string body into a useable JS object */
   const data = JSON.parse(event.body)
   console.log('Function `todo-create` invoked', data)
+  
+  console.log('WTF IS GOING ON: ', process.env.FAUNADB_SERVER_SECRET)
   const todoItem = {
     data: data
   }
